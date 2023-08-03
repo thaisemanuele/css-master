@@ -2,25 +2,38 @@
   --sand: #eccca2;
   --white: #fdf7f7;
   --blue-sky: #446d8e;
+  --light-blue: #e5e7eb;
+  --title-color: #451b66;
+  --text-color: #3a2f43;
   --sans: "Lato", sans-serif;
   --serif: "Playfair Display", serif;
 }
+
+html {
+  box-sizing: content-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--sand);
+  background-color: var(--light-blue);
   font-family: var(--sans);
 }
 
-nav {
-  padding: 2rem;
+header {
+  max-width: 1200px;
+  padding: 1rem 2rem;
+  margin: 0 auto;
   background-color: var(--blue-sky);
-  font-family: var(--serif);
-  color: var(--sand);
 }
 
 .container {
-  display: flex;
   padding: 4rem 2rem;
   background: linear-gradient(to bottom, var(--blue-sky), var(--white));
 }
@@ -30,8 +43,36 @@ nav {
   float: right;
 }
 
+.container h1 {
+  max-width: 680px;
+  padding-bottom: 1rem;
+  color: var(--title-color);
+}
+
+section h1,
+section p {
+  margin: 0 auto;
+}
+
+.container p {
+  max-width: 680px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: var(--text-color);
+}
+
+.card h2 {
+  font-family: var(--serif);
+  color: var(--title-color);
+}
+
+.card p {
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
 .card-container {
-  padding-top: 2rem;
+  padding: 2rem;
   background: linear-gradient(to top, var(--sand), var(--white));
 }
 
@@ -46,31 +87,19 @@ nav {
 
 @media (min-width: 700px) {
   .container {
-    display: flex;
     justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   .card-container {
     display: flex;
     justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   .card {
     flex-basis: 22%;
-    max-width: 300px;
   }
-}
-
-.container p {
-  max-width: 680px;
-  font-size: 1.2rem;
-  line-height: 1.5;
-}
-
-.card h2 {
-  font-family: var(--serif);
-}
-
-.card p {
-  font-size: 1rem;
 }
