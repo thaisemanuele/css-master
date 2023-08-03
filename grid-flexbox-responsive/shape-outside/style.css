@@ -10,7 +10,7 @@
 }
 
 html {
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 
 *,
@@ -24,6 +24,7 @@ body {
   padding: 0;
   background-color: var(--light-blue);
   font-family: var(--sans);
+  background: linear-gradient(to top, var(--sand), var(--light-blue));
 }
 
 header {
@@ -86,6 +87,9 @@ section p {
 }
 
 @media (min-width: 700px) {
+  html {
+    padding-bottom: 12rem;
+  }
   .container {
     justify-content: center;
     max-width: 1200px;
