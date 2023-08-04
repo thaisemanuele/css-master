@@ -1,0 +1,198 @@
+:root {
+  --black: #1d1d1d;
+  --white: #d9d8d7;
+  --bglight: #d8cabf;
+  --dkblue: #211159;
+  --barbie: #f257c9;
+  --orange: #f29d52;
+  --dkorange: #f26e50;
+  --title-color: #e73811;
+  --text-color: #3a2f43;
+  --sans: "Lato", sans-serif;
+  --serif: "Playfair Display", serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--sans);
+  color: var(--text-color);
+}
+
+h1,
+h2 {
+  color: var(--title-color);
+  font-family: var(--serif);
+}
+
+header,
+footer {
+  background-color: var(--black);
+}
+
+nav ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 2%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+  justify-content: center;
+}
+
+nav li {
+  padding: 1rem;
+  flex-basis: 48%;
+}
+
+nav li a {
+  display: block;
+  text-decoration: none;
+  color: var(--white);
+}
+
+nav li a:hover {
+  color: var(--title-color);
+}
+
+nav li:first-child {
+  flex-basis: 100%;
+  padding-bottom: 0;
+}
+
+img {
+  width: 100%;
+  padding: 3px;
+  background: linear-gradient(60deg, var(--barbie), var(--dkorange));
+}
+
+section,
+article {
+  padding: 1rem;
+}
+
+article {
+  background-color: var(--bglight);
+}
+
+#hero,
+#hero img {
+  margin: 0;
+  padding: 0;
+}
+
+#featured {
+  background-color: var(--black);
+}
+
+#featured picture {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 4rem;
+}
+
+#featured img {
+  max-width: 650px;
+}
+
+#featured h2 {
+  position: absolute;
+  padding: 1.5rem;
+  top: -4rem;
+  background: linear-gradient(
+    to bottom right,
+    var(--white) 70%,
+    transparent 100%
+  );
+}
+
+.gallery {
+  background-color: var(--bglight);
+}
+
+footer {
+  color: var(--white);
+  justify-content: space-around;
+  text-align: center;
+  padding: 2rem;
+}
+
+footer a {
+  color: var(--white);
+}
+
+.contact {
+  flex-basis: 100%;
+}
+
+@media (min-width: 550px) {
+  nav li {
+    flex-basis: 22%;
+  }
+
+  .about-1,
+  .idea-flex {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .about-1 div,
+  .idea-flex div {
+    flex-basis: 42%;
+  }
+  .popular div,
+  .gallery div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+  .popular picture,
+  .gallery picture {
+    flex-basis: 32%;
+  }
+
+  footer {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  footer p {
+    padding: 1rem;
+  }
+  address {
+    flex-basis: 42%;
+  }
+  small {
+    flex-basis: 100%;
+    padding: 1rem;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 850px) {
+  nav ul {
+    justify-content: space-between;
+    gap: 0;
+  }
+  nav li:first-child {
+    flex-basis: 60%;
+    text-align: left;
+  }
+  nav li {
+    flex-basis: 8%;
+    align-self: center;
+  }
+}
