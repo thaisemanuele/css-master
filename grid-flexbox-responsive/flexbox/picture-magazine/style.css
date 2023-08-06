@@ -28,7 +28,6 @@ body {
   padding: 0;
   font-family: var(--sans);
   color: var(--text-color);
-  background-color: #402424;
 }
 
 h1,
@@ -235,12 +234,38 @@ footer a {
     flex-basis: 8%;
     align-self: center;
   }
+  section,
+  article {
+    padding: 1rem 4rem;
+  }
 
   .hero-text-wrapper {
     bottom: 45%;
   }
-
   .hero-text {
     font-size: 6rem;
+  }
+
+  figure {
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+  }
+
+  .idea-flex {
+    justify-content: space-between;
+  }
+
+  .idea-flex div {
+    flex-basis: 60%;
+  }
+  .idea-flex figure {
+    flex-basis: 30%;
+  }
+
+  .idea-flex img {
+    max-width: 250px;
+    max-height: 250px;
+    object-fit: cover;
   }
 }
