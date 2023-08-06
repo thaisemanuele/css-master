@@ -8,6 +8,7 @@
   --dkorange: #f26e50;
   --title-color: #e73811;
   --text-color: #3a2f43;
+  --textbg: #f3ecec7d;
   --sans: "Lato", sans-serif;
   --serif: "Playfair Display", serif;
 }
@@ -27,6 +28,7 @@ body {
   padding: 0;
   font-family: var(--sans);
   color: var(--text-color);
+  background-color: #402424;
 }
 
 h1,
@@ -87,10 +89,39 @@ article {
   background-color: var(--bglight);
 }
 
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#hero {
+  position: relative;
+}
+
 #hero,
 #hero img {
   margin: 0;
   padding: 0;
+}
+
+.hero-text-wrapper {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  bottom: 38%;
+}
+
+.hero-text {
+  font-size: 2.5rem;
+  background-color: var(--textbg);
+  padding: 2rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.about,
+.popular {
+  background-color: var(--white);
 }
 
 #featured {
@@ -138,9 +169,18 @@ footer a {
   flex-basis: 100%;
 }
 
-@media (min-width: 550px) {
+@media (min-width: 600px) {
   nav li {
     flex-basis: 22%;
+  }
+
+  .hero-text-wrapper {
+    bottom: 42%;
+  }
+
+  .hero-text {
+    font-size: 4rem;
+    padding: 2rem;
   }
 
   .about-1,
@@ -182,7 +222,7 @@ footer a {
   }
 }
 
-@media (min-width: 850px) {
+@media (min-width: 1080px) {
   nav ul {
     justify-content: space-between;
     gap: 0;
@@ -194,5 +234,13 @@ footer a {
   nav li {
     flex-basis: 8%;
     align-self: center;
+  }
+
+  .hero-text-wrapper {
+    bottom: 45%;
+  }
+
+  .hero-text {
+    font-size: 6rem;
   }
 }
